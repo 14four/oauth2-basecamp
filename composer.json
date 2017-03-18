@@ -9,7 +9,7 @@
     "require-dev": {
         "mockery/mockery": "^0.9.9",
         "orchestra/testbench": "^3.4",
-        "phpunit/phpunit": "^6.0"
+        "phpunit/phpunit": "^5.0"
     },
     "license": "MIT",
     "authors": [
