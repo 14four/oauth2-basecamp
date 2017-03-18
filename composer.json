@@ -4,12 +4,11 @@
     "type": "oauth, oauth2, client, authorization, basecamp, laravel",
     "require": {
         "league/oauth2-client": "^2.0",
-        "orchestra/testbench": "^3.4",
         "illuminate/support": "^5.4"
     },
     "require-dev": {
         "mockery/mockery": "^0.9.9",
-        "squizlabs/php_codesniffer": "^2.8",
+        "orchestra/testbench": "^3.4",
         "phpunit/phpunit": "^6.0"
     },
     "license": "MIT",
