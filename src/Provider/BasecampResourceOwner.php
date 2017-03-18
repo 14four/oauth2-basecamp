@@ -22,6 +22,12 @@ class BasecampResourceOwner implements ResourceOwnerInterface {
 
     }
 
+    public function getExpiration() {
+
+        return $this->response['expires_at'];
+
+    }
+
     /**
      * Returns the Resource Owner's ID
      *

@@ -1,5 +1,7 @@
 # Basecamp OAuth 2.0 Client Provider
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Provide Basecamp OAuth 2.0 client support for PHP using [League OAuth2 Client](https://github.com/thephpleague/oauth2-client).
 
 
@@ -178,7 +180,3 @@ Run Sami
 ```bash
 omposer run-script docs
 ```
-
-## Roadmap
-
-* Setup Test
