@@ -13,7 +13,6 @@ return [
      */
     'clientId' => env('BASECAMP_CLIENT_ID'),
 
-
     /*
     |--------------------------------------------------------------------------
     | CLIENT SECRET
@@ -25,7 +24,6 @@ return [
      */
     'clientSecret' => env('BASECAMP_CLIENT_SECRET'),
 
-
     /*
     |--------------------------------------------------------------------------
     | REDIRECT URL
@@ -36,5 +34,16 @@ return [
     |
      */
     'redirectUri' => url('/basecamp-redirect-uri'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | USER AGENT
+    |--------------------------------------------------------------------------
+    |
+    | Identifies your application to Basecamp so. Used to contact you if your
+    | Application requires communication. https://github.com/basecamp/bc3-api
+    |
+     */
+    'userAgent' => 'App Name (contact@example.com)',
 
 ];

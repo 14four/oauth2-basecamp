@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>FourteenFour\Basecamp\Client\Provider\Basecamp | OAuth2 Basecamp Documentation</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:FourteenFour_Basecamp_Client_Provider_Basecamp" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">OAuth2 Basecamp Documentation</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../FourteenFour.html">FourteenFour</a></li>
+                                        <li><a href="../../../../FourteenFour/Basecamp.html">Basecamp</a></li>
+                                        <li><a href="../../../../FourteenFour/Basecamp/Client.html">Client</a></li>
+                                        <li><a href="../../../../FourteenFour/Basecamp/Client/Provider.html">Provider</a></li>
+    
+                <li>Basecamp</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Basecamp
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Basecamp</strong>        extends <abbr title="League\OAuth2\Client\Provider\AbstractProvider">AbstractProvider</abbr>
+</p>
+
+        
+    
+
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <abbr title="League\OAuth2\Client\Tool\BearerAuthorizationTrait">BearerAuthorizationTrait</abbr>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+            </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBaseAuthorizationUrl">getBaseAuthorizationUrl</a>()
+        
+                                            <p>Returns the Authorization URL used for</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAuthorizationParameters">getAuthorizationParameters</a>(array $options)
+        
+                                            <p>Returns authorization parameters based on provided options.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBaseAccessTokenUrl">getBaseAccessTokenUrl</a>(array $params)
+        
+                                            <p>Returns the base URL for requesting an access token.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="League\OAuth2\Client\Token\AccessToken">AccessToken</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAccessToken">getAccessToken</a>(mixed $grant, array $options = [])
+        
+                                            <p>Requests an access token using a specified grant and option set.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getResourceOwnerDetailsUrl">getResourceOwnerDetailsUrl</a>(<abbr title="League\OAuth2\Client\Token\AccessToken">AccessToken</abbr> $token)
+        
+                                            <p>Requests resource owner details.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultScopes">getDefaultScopes</a>()
+        
+                                            <p>Return default scope for requests</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkResponse">checkResponse</a>(<abbr title="Psr\Http\Message\ResponseInterface">ResponseInterface</abbr> $response, array|string $data)
+        
+                                            <p>Checks a provider response for errors.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="FourteenFour\Basecamp\Client\Provider\ResourceOwnerInterface">ResourceOwnerInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createResourceOwner">createResourceOwner</a>(array $response, <abbr title="League\OAuth2\Client\Token\AccessToken">AccessToken</abbr> $token)
+        
+                                            <p>Generates a resource owner object from a successful resource owner
+details request.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getBaseAuthorizationUrl">
+        <div class="location">at         line 18</div>
+        <code>                    string
+    <strong>getBaseAuthorizationUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the Authorization URL used for</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>URL Basecamp for authorization.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAuthorizationParameters">
+        <div class="location">at         line 30</div>
+        <code>            protected        array
+    <strong>getAuthorizationParameters</strong>(array $options)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns authorization parameters based on provided options.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Authorization parameters</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBaseAccessTokenUrl">
+        <div class="location">at         line 50</div>
+        <code>                    array
+    <strong>getBaseAccessTokenUrl</strong>(array $params)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the base URL for requesting an access token.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>URL to Basecamp Authorization Token</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAccessToken">
+        <div class="location">at         line 63</div>
+        <code>                    <abbr title="League\OAuth2\Client\Token\AccessToken">AccessToken</abbr>
+    <strong>getAccessToken</strong>(mixed $grant, array $options = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Requests an access token using a specified grant and option set.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$grant</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="League\OAuth2\Client\Token\AccessToken">AccessToken</abbr></td>
+            <td>Returns access token</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResourceOwnerDetailsUrl">
+        <div class="location">at         line 80</div>
+        <code>                    string
+    <strong>getResourceOwnerDetailsUrl</strong>(<abbr title="League\OAuth2\Client\Token\AccessToken">AccessToken</abbr> $token)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Requests resource owner details.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="League\OAuth2\Client\Token\AccessToken">AccessToken</abbr></td>
+                <td>$token</td>
+                <td>Resource Owner URL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>URL To resource owner information</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultScopes">
+        <div class="location">at         line 91</div>
+        <code>            protected        array
+    <strong>getDefaultScopes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return default scope for requests</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Default Query Scope</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkResponse">
+        <div class="location">at         line 105</div>
+        <code>            protected        void
+    <strong>checkResponse</strong>(<abbr title="Psr\Http\Message\ResponseInterface">ResponseInterface</abbr> $response, array|string $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks a provider response for errors.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Psr\Http\Message\ResponseInterface">ResponseInterface</abbr></td>
+                <td>$response</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|string</td>
+                <td>$data</td>
+                <td>Parsed response data</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="League\OAuth2\Client\Provider\Exception\IdentityProviderException">IdentityProviderException</abbr></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createResourceOwner">
+        <div class="location">at         line 123</div>
+        <code>            protected        <abbr title="FourteenFour\Basecamp\Client\Provider\ResourceOwnerInterface">ResourceOwnerInterface</abbr>
+    <strong>createResourceOwner</strong>(array $response, <abbr title="League\OAuth2\Client\Token\AccessToken">AccessToken</abbr> $token)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generates a resource owner object from a successful resource owner
+details request.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$response</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="League\OAuth2\Client\Token\AccessToken">AccessToken</abbr></td>
+                <td>$token</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="FourteenFour\Basecamp\Client\Provider\ResourceOwnerInterface">ResourceOwnerInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

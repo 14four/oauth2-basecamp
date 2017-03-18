@@ -34,14 +34,16 @@ class BasecampAuthServiceProvider extends ServiceProvider {
      */
     public function boot() {
 
-
         $this->publishes([
             __DIR__ . '/config/basecamp_auth.php' => config_path('basecamp_auth.php'),
         ], 'config');
 
     }
 
-
+    /**
+     * Define defered binds so laravel can return to it.
+     * @return Array Strings of registered binds for Laravel IOC
+     */
     public function provides() {
         return [
             'basecamp.auth',

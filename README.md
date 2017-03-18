@@ -165,7 +165,20 @@ class BasecampAuthController extends Controller
 }
 ```
 
+## Generating Documentation
+
+Get Sami (only required once).
+
+```bash
+composer run-script getsami
+```
+
+Run Sami
+
+```bash
+omposer run-script docs
+```
+
 ## Roadmap
 
-* Setup Documentation
 * Setup Test
