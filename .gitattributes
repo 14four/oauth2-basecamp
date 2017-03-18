@@ -1,0 +1,6 @@
+/tests export-ignore
+/docs export-ignore
+phpunit.xml export-ignore
+sami.php export-ignore
+composer.lock export-ignore
+.editorconfig export-ignore
