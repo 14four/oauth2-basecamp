@@ -1,5 +1,7 @@
 # Basecamp OAuth 2.0 Client Provider
 
+[![Build Status](https://travis-ci.org/14four/oauth2-basecamp.svg?branch=master)](https://travis-ci.org/14four/oauth2-basecamp)
+
 Provide Basecamp OAuth 2.0 client support for PHP using [League OAuth2 Client](https://github.com/thephpleague/oauth2-client).
 
 
@@ -134,7 +136,7 @@ class BasecampAuthController extends Controller
 
         $authorizationUrl = $client->getAuthorizationUrl();
 
-        $_SESSION['oauth2state'] = $client->getState();
+        session(['basecampOauth2state' => $client->getState()]);
 
         header('Location: ' . $authorizationUrl);
         exit;
@@ -144,13 +146,13 @@ class BasecampAuthController extends Controller
 
     public function login( Request $request, BasecampAuth $client ) {
 
-        if (empty($request->state) || (isset($_SESSION['oauth2state']) && $request->state !== $_SESSION['oauth2state'])) {
+        if ($request->session()->has('state')empty($request->state) || (isset($_SESSION['basecampOauth2state']) && $request->state !== $_SESSION['basecampOauth2state'])) {
 
-            if (isset($_SESSION['oauth2state'])) {
-                unset($_SESSION['oauth2state']);
+            if (isset ($_SESSION['basecampOauth2state'])) {
+                unset($_SESSION['basecampOauth2state']);
             }
 
-            exit('Invalid state');
+            abort(403, 'Unauthorized action.');
 
         }
 
@@ -158,7 +160,7 @@ class BasecampAuthController extends Controller
 
         $resourceOwner = $client->getResourceOwner( $accessToken );
 
-        dd( $resourceOwner );
+        dd( $resourceOwner->toArray() );
 
     }
 
