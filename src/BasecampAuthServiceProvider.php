@@ -1,7 +1,7 @@
-<?php namespace FourteenFour\Basecamp\Client;
+<?php namespace FourteenFour\BasecampAuth;
 
 use Illuminate\Support\ServiceProvider;
-use FourteenFour\Basecamp\Client\Provider\Basecamp;
+use FourteenFour\BasecampAuth\Provider\Basecamp;
 
 class BasecampAuthServiceProvider extends ServiceProvider {
 
@@ -23,7 +23,7 @@ class BasecampAuthServiceProvider extends ServiceProvider {
             return new Basecamp( $app['config']->get('basecamp_auth') );
         });
 
-        $this->app->alias('basecamp.auth', 'FourteenFour\Basecamp\Client\Provider\Basecamp');
+        $this->app->alias('basecamp.auth', 'FourteenFour\BasecampAuth\Provider\Basecamp');
 
     }
 

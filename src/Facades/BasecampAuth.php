@@ -1,4 +1,4 @@
-<?php namespace FourteenFour\Basecamp\Client\Facades;
+<?php namespace FourteenFour\BasecampAuth\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

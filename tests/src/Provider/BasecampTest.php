@@ -1,4 +1,4 @@
-<?php namespace FourteenFour\Basecamp\Client\Test\Provider;
+<?php namespace FourteenFour\BasecampAuth\Test\Provider;
 
 use Orchestra\Testbench\TestCase;
 use League\OAuth2\Client\Tool\QueryBuilderTrait;
@@ -13,7 +13,7 @@ class BasecampTestCase extends TestCase
 
     protected function setUp()
     {
-        $this->provider = new \FourteenFour\Basecamp\Client\Provider\Basecamp([
+        $this->provider = new \FourteenFour\BasecampAuth\Provider\Basecamp([
             'clientId' => 'mock_client_id',
             'clientSecret' => 'mock_client_secret',
             'redirectUri' => 'redirect_url',

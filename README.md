@@ -24,7 +24,7 @@ Add the service provider to the `config/app.php` file.
   //...
   'providers' => [
     //...
-    FourteenFour\Basecamp\Client\BasecampAuthServiceProvider::class,
+    FourteenFour\BasecampAuth\BasecampAuthServiceProvider::class,
   ],
   //...
 ```
@@ -39,7 +39,7 @@ Add the facade to the `config/app.php` file.
   //...
   'aliases' => [
     //...
-    'BasecampAuth' => FourteenFour\Basecamp\Client\Provider\Basecamp::class,
+    'BasecampAuth' => FourteenFour\BasecampAuth\Provider\Basecamp::class,
   ],
   //...
 ```
@@ -63,12 +63,12 @@ BASECAMP_CLIENT_SECRET=
 
 ## Usage
 
-To use Basecamp OAuth you will need to use the `FourteenFour\Basecamp\Client\Provider\Basecamp` class.
+To use Basecamp OAuth you will need to use the `FourteenFour\BasecampAuth\Provider\Basecamp` class.
 
 ```php
 <?php
 
-$provider = new \FourteenFour\Basecamp\Client\Provider\Basecamp([
+$provider = new \FourteenFour\BasecampAuth\Provider\Basecamp([
     'clientId' => '{your-basecamp-client-id}',
     'clientSecret' => '{your-basecamp-client-secret}',
     'redirectUri' => '{your-callback-url}',

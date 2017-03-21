@@ -3,13 +3,13 @@
     "description": "Basecamp OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
     "type": "oauth, oauth2, client, authorization, basecamp, laravel",
     "require": {
-        "league/oauth2-client": "^2.0",
-        "illuminate/support": "^5.4"
+        "league/oauth2-client": "^2.0"
     },
     "require-dev": {
         "mockery/mockery": "^0.9.9",
         "orchestra/testbench": "^3.4",
-        "phpunit/phpunit": "^5.0"
+        "phpunit/phpunit": "^5.0",
+        "illuminate/support": "^5.4"
     },
     "license": "MIT",
     "authors": [
@@ -20,12 +20,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "FourteenFour\\Basecamp\\Client\\": "./src/"
+            "FourteenFour\\BasecampAuth\\": "./src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "FourteenFour\\Basecamp\\Client\\Test\\": "./tests/src/"
+            "FourteenFour\\BasecampAuth\\Test\\": "./tests/src/"
         }
     },
     "scripts": {
