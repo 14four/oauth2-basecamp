@@ -134,9 +134,9 @@ class BasecampAuthController extends Controller
 
     public function auth( BasecampAuth $client ) {
 
-        $authorizationUrl = $client->getAuthorizationUrl();
+        $authorizationUrl = $client::getAuthorizationUrl();
 
-        session(['basecampOauth2state' => $client->getState()]);
+        session(['basecampOauth2state' => $client::getState()]);
 
         header('Location: ' . $authorizationUrl);
         exit;
@@ -156,9 +156,9 @@ class BasecampAuthController extends Controller
 
         }
 
-        $accessToken = $client->getAccessToken('authorization_code', ['code' => $request->code]);
+        $accessToken = $client::getAccessToken('authorization_code', ['code' => $request->code]);
 
-        $resourceOwner = $client->getResourceOwner( $accessToken );
+        $resourceOwner = $client::getResourceOwner( $accessToken );
 
         dd( $resourceOwner->toArray() );
 

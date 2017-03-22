@@ -19,8 +19,12 @@ class BasecampAuthServiceProvider extends ServiceProvider {
      */
     public function register() {
 
-        $this->app->bind('basecamp.auth', function ($app) {
-            return new Basecamp( $app['config']->get('basecamp_auth') );
+        $this->app->singleton('basecamp.auth', function ($app) {
+
+            $config = $this->getConfig();
+
+            return new Basecamp( $config );
+
         });
 
         $this->app->alias('basecamp.auth', 'FourteenFour\BasecampAuth\Provider\Basecamp');
@@ -38,6 +42,16 @@ class BasecampAuthServiceProvider extends ServiceProvider {
             __DIR__ . '/config/basecamp_auth.php' => config_path('basecamp_auth.php'),
         ], 'config');
 
+    }
+
+    private function getConfig() {
+        $config = $this->app['config']->get('basecamp_auth');
+
+        if (filter_var($config['redirectUri'], FILTER_VALIDATE_URL) === FALSE) {
+            $config['redirectUri'] = url($config['redirectUri']);
+        }
+
+        return $config;
     }
 
     /**

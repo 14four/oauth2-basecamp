@@ -35,8 +35,6 @@ class Basecamp extends AbstractProvider {
 
         $newOptions = array_merge($defaultOptiosn, $options);
 
-        // dd($newOptions);
-
         return parent::getAuthorizationParameters( $newOptions );
 
     }
