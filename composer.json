@@ -1,7 +1,8 @@
 {
     "name": "14four/oauth2-basecamp",
     "description": "Basecamp OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
-    "type": "oauth, oauth2, client, authorization, basecamp, laravel",
+    "type": "library",
+    "keywords": ["oauth", "oauth2", "client", "authorization", "basecamp", "laravel"],
     "require": {
         "league/oauth2-client": "^2.0"
     },
