@@ -61,7 +61,7 @@ class Basecamp extends AbstractProvider {
     public function getAccessToken($grant, array $options = []) {
 
         $defaultOptiosn = [
-            'type' => 'web_server'
+            'type' => $grant == 'refresh_token' ? 'refresh' : 'web_server'
         ];
 
         $newOptions = array_merge($defaultOptiosn, $options);
